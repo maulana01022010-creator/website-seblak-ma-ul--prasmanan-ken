@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seblak Prasmanan - Pedas, Gurih, Bebas Pilih!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Volkhov:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#D90429',
+                            darkred: '#8D0801',
+                            amber: '#FFB703',
+                            orange: '#FB8500',
+                            dark: '#111827',
+                            card: '#1F2937'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Volkhov', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-hero {
+            background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #1f2937; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d90429; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-red to-brand-amber flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-red/40">
+                    <i class="fa-solid font-bold fa-fire"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-white via-amber-200 to-brand-amber bg-clip-text text-transparent">SEBLAK<span class="text-brand-red">MA'UL</span></span>
+            </div>
+
+            <!-- Nav Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-wide">
+                <a href="#beranda" class="hover:text-brand-amber transition">Beranda</a>
+                <a href="#tentang" class="hover:text-brand-amber transition">Tentang Kami</a>
+                <a href="#menu" class="hover:text-brand-amber transition">Prasmanan Menu</a>
+                <a href="#lokasi" class="hover:text-brand-amber transition">Lokasi & Kontak</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#menu" class="bg-gradient-to-r from-brand-red to-brand-orange hover:from-brand-darkred hover:to-brand-red text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-brand-red/30 transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-utensils mr-2"></i>Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="min-h-screen pt-28 pb-16 bg-hero flex items-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/40 px-4 py-1.5 rounded-full text-brand-amber text-xs sm:text-sm font-semibold tracking-wide">
+                    <i class="fa-solid fa-pepper-hot"></i> Sensasi Pedas Bikin Nagih!
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight">
+                    Bebas Pilih Topping, <br>
+                    <span class="bg-gradient-to-r from-brand-amber to-brand-orange bg-clip-text text-transparent">Seblak Prasmanan</span> Kekinian!
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl">
+                    Nikmati racikan seblak rempah asli dengan lebih dari 20+ pilihan topping kencur-gurih. Pilih topping kesukaanmu, tentukan level pedasmu, dan siap dikirim!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                    <a href="#menu" class="bg-brand-red hover:bg-brand-darkred text-white text-center px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-red/30 transition">
+                        Buat Seblak Impianmu <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#lokasi" class="bg-gray-800/80 hover:bg-gray-700 border border-gray-700 text-center px-6 py-4 rounded-xl font-semibold text-lg transition">
+                        <i class="fa-solid fa-location-dot text-brand-amber mr-2"></i>Cek Outlets
+                    </a>
+                </div>
+                <!-- Mini Stats -->
+                <div class="pt-8 grid grid-cols-3 gap-4 border-t border-gray-800 text-center md:text-left">
+                    <div>
+                        <div class="text-2xl font-bold text-brand-amber">25+</div>
+                        <div class="text-xs text-gray-400">Varian Topping</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-brand-amber">Lv. 0 - 5</div>
+                        <div class="text-xs text-gray-400">Tingkat Pedas</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-brand-amber">100%</div>
+                        <div class="text-xs text-gray-400">Rempah Alami</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Hero Card -->
+            <div class="relative flex justify-center">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-red to-brand-amber rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                <div class="relative bg-brand-card p-6 sm:p-8 rounded-2xl border border-gray-700/60 shadow-2xl max-w-md w-full">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-fire-flame-curved text-brand-red"></i> Best Seller Favorit
+                        </h3>
+                        <span class="bg-amber-500/20 text-amber-400 text-xs px-3 py-1 rounded-full font-bold">Populer</span>
+                    </div>
+                    <!-- Sample Card Item -->
+                    <div class="space-y-4">
+                        <div class="relative rounded-xl overflow-hidden h-48 bg-gray-900">
+                            <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&w=800&auto=format&fit=crop" alt="Seblak Prasmanan" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">Paket Seblak Komplit Premium</h4>
+                                    <p class="text-xs text-gray-300">Kerupuk, Mi, Bakso, Sosis, Dumpling, Ceker</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="text-xs text-gray-400">Mulai dari</span>
+                                <div class="text-xl font-extrabold text-brand-amber">Rp 15.000</div>
+                            </div>
+                            <a href="#menu" class="bg-brand-red hover:bg-brand-darkred text-white text-xs px-4 py-2.5 rounded-lg font-bold transition">
+                                Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu & WhatsApp Order Builder -->
+    <section id="menu" class="py-20 bg-gray-950 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">Sistem Prasmanan Interaktif</h2>
+                <p class="text-3xl sm:text-5xl font-black text-white">Rakit Seblak Sesuai Seleramu!</p>
+                <p class="text-gray-400 mt-4 text-base">Pilih kuah, tingkat kepedasan, topping prasmanan, dan minuman seperti di kasir Mie Gacoan. Pesanan langsung terkirim otomatis ke WhatsApp kami.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Left Section: Selection Tabs & Item Grid -->
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <!-- Step 1: Base Kuah & Pedas -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-gray-800 space-y-6">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-gray-700 pb-3">
+                            <span class="w-7 h-7 bg-brand-red rounded-full flex items-center justify-center text-sm">1</span> 
+                            Pilih Kuah & Level Pedas
+                        </h3>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">Varian Kuah:</label>
+                                <select id="kuah-select" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-amber">
+                                    <option value="Kuah Seblak Original Kencur">Kuah Original Kencur (Gurih Rempah)</option>
+                                    <option value="Kuah Chili Oil Merah">Kuah Chili Oil Pedas Gurih</option>
+                                    <option value="Kuah Creamy Milk Seblak">Kuah Creamy Milk (Susu & Keju)</option>
+                                    <option value="Seblak Kering (Nyemek)">Seblak Nyemek / Kering</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">Tingkat Pedas:</label>
+                                <select id="level-select" class="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-amber">
+                                    <option value="Level 0 (Tanpa Cabai)">Level 0 - Tidak Pedas</option>
+                                    <option value="Level 1 (Sedang)">Level 1 - Pedas Manja (2 Cabai)</option>
+                                    <option value="Level 2 (Pedas Mantap)">Level 2 - Pedas Mantap (5 Cabai)</option>
+                                    <option value="Level 3 (Pedas Gila)">Level 3 - Pedas Gila (10 Cabai)</option>
+                                    <option value="Level 4 (Nangis Batin)">Level 4 - Nangis Batin (15 Cabai)</option>
+                                    <option value="Level 5 (Sultan Fire)">Level 5 - Sultan Fire (20+ Cabai)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Pick Toppings & Minuman -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-gray-800 space-y-6">
+                        <div class="flex flex-wrap justify-between items-center border-b border-gray-700 pb-3 gap-2">
+                            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                <span class="w-7 h-7 bg-brand-red rounded-full flex items-center justify-center text-sm">2</span> 
+                                Ambil Prasmanan & Minuman
+                            </h3>
+                            <!-- Category Filter Buttons -->
+                            <div class="flex gap-2 text-xs">
+                                <button onclick="filterCategory('all')" class="cat-btn active bg-brand-red text-white px-3 py-1.5 rounded-lg font-medium transition">Semua</button>
+                                <button onclick="filterCategory('topping')" class="cat-btn bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1.5 rounded-lg font-medium transition">Topping</button>
+                                <button onclick="filterCategory('karbo')" class="cat-btn bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1.5 rounded-lg font-medium transition">Karbo/Mie</button>
+                                <button onclick="filterCategory('minuman')" class="cat-btn bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1.5 rounded-lg font-medium transition">Minuman</button>
+                            </div>
+                        </div>
+
+                        <!-- Menu Grid -->
+                        <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+                            <!-- Items inserted by JS -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Section: Live Order Summary (Gacoan Style) -->
+                <div class="lg:col-span-1 sticky top-28">
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-red/30 shadow-2xl space-y-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-full blur-xl pointer-events-none"></div>
+
+                        <div class="flex items-center justify-between border-b border-gray-700 pb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Detail Pesanan</h3>
+                                <p class="text-xs text-gray-400">Struk Sementara Prasmanan</p>
+                            </div>
+                            <div class="w-10 h-10 bg-brand-red/20 text-brand-red rounded-full flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-receipt"></i>
+                            </div>
+                        </div>
+
+                        <!-- Customer Info Input -->
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-xs text-gray-300 mb-1">Nama Pemesan:</label>
+                                <input type="text" id="cust-name" placeholder="Contoh: Ahmad " class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-amber">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-300 mb-1">Tipe Pesanan:</label>
+                                <select id="order-type" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-amber">
+                                    <option value="Makan di Tempat (Dine In)">Makan di Tempat (Dine In)</option>
+                                    <option value="Bawa Pulang (Take Away)">Bawa Pulang (Take Away)</option>
+                                    <option value="Delivery Kurir Lokal">Delivery Kurir Lokal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Selected Items List -->
+                        <div class="border-t border-b border-gray-800 py-4 space-y-3 max-h-56 overflow-y-auto custom-scrollbar">
+                            <div class="text-xs text-gray-400 flex justify-between font-semibold border-b border-gray-800 pb-2">
+                                <span>ITEM / TOPPING</span>
+                                <span>SUBTOTAL</span>
+                            </div>
+                            <div id="cart-items" class="space-y-2 text-sm">
+                                <p class="text-gray-500 text-xs italic text-center py-4">Belum ada item dipilih.<br>Klik tombol (+) di menu untuk menambah.</p>
+                            </div>
+                        </div>
+
+                        <!-- Total Calculation -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs text-gray-400">
+                                <span>Kuah & Level:</span>
+                                <span id="summary-level" class="text-brand-amber font-semibold">Lv. 0</span>
+                            </div>
+                            <div class="flex justify-between text-lg font-black text-white pt-2 border-t border-gray-800">
+                                <span>Total Bayar:</span>
+                                <span id="cart-total" class="text-brand-amber">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Action Button -->
+                        <button onclick="sendToWhatsapp(6282218725879)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-emerald-900/40 flex items-center justify-center gap-2 transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WhatsApp
+                        </button>
+                        <p class="text-[10px] text-gray-500 text-center">Struk format otomatis akan dikirim ke WhatsApp kasir kami.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="lokasi" class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h2 class="text-xs font-bold text-brand-amber uppercase tracking-widest">Kunjungi Kedai Kami</h2>
+                        <p class="text-3xl font-black text-white mt-1">Lokasi Outlet & Jam Buka</p>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Nikmati pengalaman mengambil topping prasmanan langsung sepuasnya secara hygiene & nyaman dengan tempat ber-AC dan WiFi gratis.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-brand-card rounded-xl border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Alamat Utama</h4>
+                                <p class="text-xs text-gray-400 mt-1">JI.H.Hasan Arif,Sindangsari,Kec.Leuwigoong,Kabupaten Garut,Jawa Barat 44192</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-brand-card rounded-xl border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-brand-amber/20 text-brand-amber flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Jam Operasional</h4>
+                                <p class="text-xs text-gray-400 mt-1">Buka Setiap Hari: 08.00 WIB - 21.00 WIB</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-brand-card rounded-xl border border-gray-800">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">WhatsApp / Call Center</h4>
+                                <p class="text-xs text-gray-400 mt-1">+62 822-9758-4291 (Order & Customer Service)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Mock / Responsive Frame -->
+                <div class="bg-brand-card p-3 rounded-2xl border border-gray-800 h-96 relative overflow-hidden shadow-2xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.117495455316!2d107.9489020750102!3d-7.112380292891135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68b5007a3757f7%3A0xbc74b57962e54a53!2sKp.Cibudug!5e0!3m2!1sen!2sid!4v1789483707937!5m2!1sen!2sid"
+                        class="w-full h-full rounded-xl border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center space-y-4 sm:space-y-0">
+            <div class="flex items-center justify-center gap-2">
+                <i class="fa-solid fa-fire text-brand-red"></i>
+                <span class="font-bold text-white tracking-wider">SEBLAK MA'UL</span>
+            </div>
+            <p class="text-xs text-gray-500">
+                &copy; 2026 Seblak Prasmanan Ma'ul. All rights reserved.
+            </p>
+            <div class="flex justify-center space-x-4 text-gray-400 text-sm">
+                <a href="#" class="hover:text-brand-amber"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-amber"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="hover:text-brand-amber"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Store Configuration
+        const WHATSAPP_NUMBER = "6282218725879"; // Ganti nomor WA Kasir di sini
+
+        // Menu Prasmanan Database
+        const menuData = [
+            // Toppings
+            { id: 1, name: "Dumpling Keju", category: "topping", price: 2500, icon: "fa-cookie-bite" },
+            { id: 2, name: "Dumpling Ayam", category: "topping", price: 2500, icon: "fa-cookie" },
+            { id: 3, name: "Bakso Sapi Halus", category: "topping", price: 2000, icon: "fa-circle" },
+            { id: 4, name: "Sosis Sapi Premium", category: "topping", price: 2000, icon: "fa-hotdog" },
+            { id: 5, name: "Chikuwa Grill", category: "topping", price: 2000, icon: "fa-ring" },
+            { id: 6, name: "Ceker Pedas Juara", category: "topping", price: 3000, icon: "fa-drumstick-bite" },
+            { id: 7, name: "Kerupuk Orange (Khas)", category: "topping", price: 1000, icon: "fa-bowl-food" },
+            { id: 8, name: "Kerupuk Tangga/Mawar", category: "topping", price: 1000, icon: "fa-sun" },
+            { id: 9, name: "Batagor Kering / Siomay", category: "topping", price: 1500, icon: "fa-cube" },
+            { id: 10, name: "Cuanki Tahu", category: "topping", price: 1500, icon: "fa-square" },
+            
+            // Karbo/Mie
+            { id: 11, name: "Mie Yellow / Ramen", category: "karbo", price: 3000, icon: "fa-stroopwafel" },
+            { id: 12, name: "Kwetiau Basah", category: "karbo", price: 3000, icon: "fa-lines-leaning" },
+            { id: 13, name: "Macaroni Spiral", category: "karbo", price: 2000, icon: "fa-wheat-awn" },
+
+            // Minuman (Gacoan Style)
+            { id: 14, name: "Es Teh Manis Jumbo", category: "minuman", price: 4000, icon: "fa-glass-water" },
+            { id: 15, name: "Es Jeruk Peras", category: "minuman", price: 5000, icon: "fa-citrus" },
+            { id: 16, name: "Es Teh Tarik", category: "minuman", price: 6000, icon: "fa-mug-hot" },
+            { id: 17, name: "Air Mineral Botol", category: "minuman", price: 4000, icon: "fa-bottle-water" }
+        ];
+
+        // State Store
+        let cart = {};
+
+        // Render Menu Grid
+        function renderMenu(filter = 'all') {
+            const container = document.getElementById('menu-grid');
+            container.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? menuData 
+                : menuData.filter(item => item.category === filter);
+
+            filtered.forEach(item => {
+                const qty = cart[item.id] || 0;
+                
+                const card = document.createElement('div');
+                card.className = "bg-gray-900 border border-gray-800 hover:border-gray-700 p-4 rounded-xl flex items-center justify-between transition";
+                card.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-gray-800 text-brand-amber flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">${item.name}</h4>
+                            <p class="text-xs text-brand-amber font-semibold">Rp ${item.price.toLocaleString('id-ID')}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 bg-gray-800 rounded-lg p-1 border border-gray-700">
+                        <button onclick="updateQty(${item.id}, -1)" class="w-7 h-7 bg-gray-700 hover:bg-gray-600 text-white rounded font-bold text-sm flex items-center justify-center transition">-</button>
+                        <span class="w-6 text-center text-sm font-bold text-white">${qty}</span>
+                        <button onclick="updateQty(${item.id}, 1)" class="w-7 h-7 bg-brand-red hover:bg-brand-darkred text-white rounded font-bold text-sm flex items-center justify-center transition">+</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Category Filter Control
+        function filterCategory(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-red', 'text-white', 'active');
+                btn.classList.add('bg-gray-800', 'text-gray-300');
+            });
+            event.target.classList.remove('bg-gray-800', 'text-gray-300');
+            event.target.classList.add('bg-brand-red', 'text-white', 'active');
+            renderMenu(cat);
+        }
+
+        // Update Cart Item Quantity
+        function updateQty(id, change) {
+            if (!cart[id]) cart[id] = 0;
+            cart[id] += change;
+
+            if (cart[id] <= 0) {
+                delete cart[id];
+            }
+
+            renderMenu(getCurrentFilter());
+            updateCartSummary();
+        }
+
+        function getCurrentFilter() {
+            const activeBtn = document.querySelector('.cat-btn.active');
+            if(!activeBtn) return 'all';
+            const text = activeBtn.innerText.toLowerCase();
+            if(text.includes('topping')) return 'topping';
+            if(text.includes('karbo')) return 'karbo';
+            if(text.includes('minuman')) return 'minuman';
+            return 'all';
+        }
+
+        // Update Order Summary UI
+        function updateCartSummary() {
+            const cartContainer = document.getElementById('cart-items');
+            const totalElement = document.getElementById('cart-total');
+            const summaryLevel = document.getElementById('summary-level');
+            const levelSelect = document.getElementById('level-select');
+
+            summaryLevel.innerText = levelSelect.value.split(' ')[0] + ' ' + levelSelect.value.split(' ')[1];
+
+            cartContainer.innerHTML = '';
+            let grandTotal = 0;
+            let hasItems = false;
+
+            Object.keys(cart).forEach(id => {
+                const item = menuData.find(m => m.id == id);
+                const qty = cart[id];
+                const subtotal = item.price * qty;
+                grandTotal += subtotal;
+                hasItems = true;
+
+                const itemRow = document.createElement('div');
+                itemRow.className = "flex justify-between items-center text-xs";
+                itemRow.innerHTML = `
+                    <span class="text-gray-300"><strong class="text-brand-amber">${qty}x</strong> ${item.name}</span>
+                    <span class="font-semibold text-white">Rp ${subtotal.toLocaleString('id-ID')}</span>
+                `;
+                cartContainer.appendChild(itemRow);
+            });
+
+            if (!hasItems) {
+                cartContainer.innerHTML = `<p class="text-gray-500 text-xs italic text-center py-4">Belum ada item dipilih.<br>Klik tombol (+) di menu untuk menambah.</p>`;
+            }
+
+            totalElement.innerText = `Rp ${grandTotal.toLocaleString('id-ID')}`;
+        }
+
+        // Listen for Level Select Changes
+        document.getElementById('level-select').addEventListener('change', updateCartSummary);
+
+        // Send Order to WhatsApp Function
+        function sendToWhatsapp() {
+            const name = document.getElementById('cust-name').value.trim();
+            const orderType = document.getElementById('order-type').value;
+            const kuah = document.getElementById('kuah-select').value;
+            const level = document.getElementById('level-select').value;
+
+            if (!name) {
+                alert("Harap isi nama pemesan terlebih dahulu!");
+                return;
+            }
+
+            const cartKeys = Object.keys(cart);
+            if (cartKeys.length === 0) {
+                alert("Pilih minimal 1 topping atau minuman prasmanan!");
+                return;
+            }
+
+            // Build Message String (Gacoan Format)
+            let itemsList = "";
+            let grandTotal = 0;
+
+            cartKeys.forEach(id => {
+                const item = menuData.find(m => m.id == id);
+                const qty = cart[id];
+                const subtotal = item.price * qty;
+                grandTotal += subtotal;
+                itemsList += `• ${qty} ${item.name} = Rp ${subtotal.toLocaleString('id-ID')}\n`;
+            });
+
+            const text = 
+`*--- PESANAN SEBLAK PRASMANAN ---*
+*Nama Pemesan:* ${name}
+*Tipe Order:* ${orderType}
+
+*DETAIL SEBLAK:*
+- *Kuah:* ${kuah}
+- *Kepedasan:* ${level}
+
+*ITEM / TOPPING CHOICES:*
+${itemsList}
+*TOTAL PEMBAYARAN:* Rp ${grandTotal.toLocaleString('id-ID')}
+
+Mohon segera diproses ya Kak, Terima Kasih! 🔥`;
+
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`, '_blank');
+        }
+
+        // Initialize App
+        window.onload = function() {
+            renderMenu('all');
+        }
+    </script>
+</body>
+</html>
